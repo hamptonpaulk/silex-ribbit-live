@@ -2,7 +2,15 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$app = new Silex\Application();
+use Silex\Application;
+
+class RibbitApplication extends Application
+{
+    use Application\TwigTrait;
+    // more traits in the future
+}
+
+$app = new RibbitApplication();
 $app['debug'] = true;
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -19,7 +27,7 @@ $app->get('/hello/{name}', function($name) {
 });
 
 $app->get('/', function() use ($app) {
-    return $app['twig']->render('index.php.twig');
+    return $app->render('index.php.twig');
 });
 
 $app->run();
