@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <title>Ribbit - A Treehouse Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ app.request.getbaseurl }}/assets/css/normalize.css" rel="stylesheet" media="screen">
+    <link href="{{ app.request.getbaseurl }}/assets/css/foundation.min.css" rel="stylesheet" media="screen">
+    <link href="{{ app.request.getbaseurl }}/assets/css/foundation-icons.css" rel="stylesheet" media="screen">
+    <link href="{{ app.request.getbaseurl }}/assets/css/my-styles.css" rel="stylesheet" media="screen">
+    <script src="{{ app.request.getbaseurl }}/assets/js/modernizr.js"></script>
+  </head>
+  <body>
+    {% include 'partials/nav.php.twig'%}
+    {% block body %}{% endblock %}
+
+    {% include 'partials/modals.php.twig'%}
+
+    <!-- Page Footer -->
+    <div class="row">
+      <hr>
+      <div class="medium-4 medium-centered column">      
+        {% block footer %}
+          <p>&copy; 2013 Ribbit - By Treehouse Island, Inc.</p>
+        {% endblock %}
+      </div>    
+    </div>
+    <!-- End Page Footer -->
+    <script src="{{ app.request.getbaseurl }}/assets/js/jquery.js"></script>
+    <script src="{{ app.request.getbaseurl }}/assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script> 
+    
+  </body>
+</html>

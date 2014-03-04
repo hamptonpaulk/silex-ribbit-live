@@ -1,46 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <title>Ribbit - A Treehouse Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ app.request.getbaseurl }}/assets/css/normalize.css" rel="stylesheet" media="screen">
-    <link href="{{ app.request.getbaseurl }}/assets/css/foundation.min.css" rel="stylesheet" media="screen">
-    <link href="{{ app.request.getbaseurl }}/assets/css/foundation-icons.css" rel="stylesheet" media="screen">
-    <link href="{{ app.request.getbaseurl }}/assets/css/my-styles.css" rel="stylesheet" media="screen">
-    <script src="{{ app.request.getbaseurl }}/assets/js/modernizr.js"></script>
-  </head>
-  <body>
+{% extends 'layouts/main.php.twig' %}
 
-    <!-- Top Bar -->
-    <div class="contain-to-grid fixed">    
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1>
-              <a href="#">Ribbit</a>
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
-        <section class="top-bar-section">
-          <ul class="right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Ribbit</a></li>
-            <li class="has-dropdown">
-              <a href="#">Treehouse</a>
-              <ul class="dropdown">
-                <li><a href="#">About Treehouse</a></li>
-                <li><a href="#">Video Library</a></li>
-                <li><a href="#">Tracks</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Plans &amp; Pricing</a></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    </div><!-- End Top Bar -->
-
+{% block body %}
     <!-- Interchange Content -->
     <!-- Content Slider -->
     <div class="row">
@@ -66,22 +26,6 @@
       </div>
     </div>
     <!-- End Content Slider -->
-
-<!-- Form Modal -->
-<div id="formModal" class="reveal-modal small" data-reveal>
-  <h3>We'll Text You the Link!</h3>
-  <form class="custom">
-    <fieldset>
-      <input type="tel" placeholder="Mobile Phone">
-      <select>
-        <option>iOS</option>
-        <option>Android</option>
-      </select>             
-      <button type="submit" class="small button">Text me!</button>
-    </fieldset>
-  </form>
-  <a href="#" class="close-reveal-modal">&#215;</a>
-</div><!-- End Form Modal -->
     <!-- End Interchange Content -->
 
     <!-- Feature Content -->
@@ -125,29 +69,8 @@
         <a href="#" class="medium button success radius">Sign up for Treehouse &raquo;</a>
       </div>
     </div><!-- End Treehouse Content -->
+{% endblock %}
 
-    <!-- Page Footer -->
-    <div class="row">
-      <hr>
-      <div class="medium-4 medium-centered column">      
-        <p>&copy; 2013 Ribbit - By Treehouse Island, Inc.</p>
-      </div>    
-    </div><!-- End Page Footer -->
-
-    <!-- Video Modal -->
-    <div id="vidModal" class="reveal-modal" data-reveal>
-      <h3>Learn how to make this app</h3>
-      <div class="flex-video widescreen">
-        <iframe width="420" height="315" src="http://www.youtube.com/embed/hTf0CgRC1_Q" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <a class="close-reveal-modal">&#215;</a>
-    </div><!-- End Video Modal -->
-    
-    <script src="{{ app.request.getbaseurl }}/assets/js/jquery.js"></script>
-    <script src="{{ app.request.getbaseurl }}/assets/js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script> 
-    
-  </body>
-</html>
+{% block footer %}
+  <p> Hey Man! It's 2014</p>
+{% endblock %}
